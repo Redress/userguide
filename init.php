@@ -1,5 +1,7 @@
 <?php defined('SYSPATH') or die('No direct script access.');
 
+require_once('PHPUnit/Framework.php');
+
 // Static file serving (CSS, JS, images)
 Route::set('docs/media', 'guide/media(/<file>)', array('file' => '.+'))
 	->defaults(array(
