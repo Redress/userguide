@@ -30,42 +30,6 @@ Any images used in the userguide pages must be in `media/guide/<module>/`.  For 
 
 The API browser is generated from the actual source code.  The descriptions for classes, constants, properties, and methods is extracted from the comments and parsed in Markdown.  For example if you look in the comment for [Kohana_Core::init](http://github.com/kohana/core/blob/c443c44922ef13421f4a/classes/kohana/core.php#L5) you can see a markdown list and table.  These are parsed and show correctly in the API browser.  `@param`, `@uses`, `@throws`, `@returns` and other tags are parsed as well.
 
-## How to Contribute
-
-### If you don't know git, or you don't feel like you are a good documentation writer:
-
-Just submit a [bug report](http://dev.kohanaframework.org/projects/userguide3/issues/new) and explain what you think can be improved.  If you are a good writer but don't know git, just provide some content in your bug report and we will merge it in.
-
-### If you know git:
-
-**Short version**: Create a ticket on redmine for your changes, fork the module whose docs you wish to improve (e.g. `git://github.com/kohana/orm.git` or `git://github.com/kohana/core.git`), checkout the appropriate branch, make changes, and then send a pull request with the ticket number.
-
-**Long version:**  (This still assumes you at least know your way around git, especially how submodules work.)
-
- 1. Create a ticket on redmine for your changes.
-
- 2. Fork the specific repo you want to contribute to on github. (For example go to http://github.com/kohana/core and click the fork button.)
-
- 3. Now go into the repo of the area of docs you want to contribute to and add your forked repo as a new remote, and push to it.
- 
-		cd system
-		
-		# make sure we are up to date
-		git checkout 3.1/develop
-		git pull
-		
-		# add your repository as a new remote
-		git remote add <your name> git@github.com:<your name>/core.git
-		
-		# (make some changes to the docs)
-		
-		# now commit the changes and push to your repo
-		git commit
-		git push <your name> 3.1/develop
-
- 4. Send a pull request on github containing the ticket number, and update the ticket with a link to the pull request.
-
-
 # What the userguide adds to markdown:
 
 In addition to the features and syntax of [Markdown](http://daringfireball.net/projects/markdown/) and [Markdown Extra](http://michelf.com/projects/php-markdown/extra/) the following apply to userguide pages and api documentation:
@@ -96,7 +60,7 @@ You can make links to the api browser by wrapping any class name in brackets.  Y
 
 If you want to have parameters, only put the brackets around the class and function (not the params), and put a backslash in front of the opening parenthesis. 
 
-	[Kohana::config]\('foobar','baz')
+	[Kohana::$config]\('foobar','baz')
 
 ### Including Views
 
